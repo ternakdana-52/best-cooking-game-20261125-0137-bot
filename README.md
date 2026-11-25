@@ -13,11 +13,15 @@ You are the chef of a small restaurant. Walk the kitchen, collect ingredients fr
 - `W A S D` or arrow keys — move the chef around the kitchen
 - Drag the mouse — rotate the camera · mouse wheel — zoom
 - `E` — interact with the nearest station (or click the gold button)
+- Click / tap a station — walk there and interact automatically
+- On phones: left joystick to move, drag to look, pinch to zoom, big USE button to interact
 - Follow the order board: Fridge → Prep Station → Cooking Range → Serving Counter
+
+Cooking is visible: the food appears in the pan on the stove with steam and a live "COOKING %" label, the ingredients you carry ride on a tray in the chef's hands, and the finished plate waits on the serving counter.
 
 ## Provenance
 
-The 3D game source was supplied by the entrant (from their uploaded `master-chef-3d.zip`) and integrated by the agent: the agent removed the Google Fonts import so the game makes zero network requests, added the 120-second shift timer and the order-board heading, added the screenshot-staging driver, built the game to static files, and wrote the hand-in program and this entry around it. The kitchen, chef, stations and recipes are procedurally built from Three.js geometry — no downloaded models, no network at run time.
+The 3D game source was supplied by the entrant (from their uploaded `master-chef-3d.zip`) and integrated by the agent: the agent removed the Google Fonts import so the game makes zero network requests, added the 120-second shift timer and the order-board heading, added the screenshot-staging driver, built the game to static files, and wrote the hand-in program and this entry around it. In the second rebuild the agent added the visible cooking (food in the pan, steam, live progress label, carry tray, finished plate, ingredient props on the counters), the tap-to-walk station interaction with highlighted markers, and the full phone controls (virtual joystick, touch camera, pinch zoom, USE button). The kitchen, chef, stations and recipes are procedurally built from Three.js geometry — no downloaded models, no network at run time.
 
 ## Run it
 
