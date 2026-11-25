@@ -1,10 +1,16 @@
-// Sizzle & Serve — the hand-in program (Node 22, standard library only).
+// Master Chef 3D — the hand-in program (Node 22, standard library only).
 // It copies the game and its screenshots from beside this file into
 // /output, then writes /output/dossier.json, the summary the judge reads,
 // using the vendored make.fun library. Outside the grader, the environment
 // variable MAKEFUN_OUTPUT_DIR stands in for /output:
 //
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+//
+// The game itself is a third-person 3D kitchen (React + Three.js, built to
+// static files under game/): the chef walks the kitchen with WASD, works
+// the fridge, prep station, stove and serving counter with E, and races a
+// 120-second shift timer. game/assets/app.min.js is the vendored build;
+// game/index.html and game/src/shots.js are the hand-in's own files.
 
 import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
