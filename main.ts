@@ -6,17 +6,19 @@
 //
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 //
-// The game itself is a third-person 3D kitchen (React + Three.js, built to
-// static files under game/): the chef walks the kitchen with WASD, works
-// the fridge, prep station, stove and serving counter with E, and races a
-// 120-second shift timer. Cooking is visible: food appears in the pan on
-// the stove with steam and a live progress label, carried ingredients ride
-// on a tray in the chef's hands, and the finished plate sits on the
-// serving counter. On phones the game is fully touch-playable: a virtual
-// joystick moves the chef, dragging rotates the camera, pinching zooms,
-// a big USE button interacts, and tapping a station walks the chef there.
-// game/assets/app.min.js is the vendored build; game/index.html and
-// game/src/shots.js are the hand-in's own files.
+// The game itself is a stationary 3D cooking station (React + Three.js,
+// built to static files under game/): the chef stays at one spot behind
+// the counter and every action is a tap — tap the ingredient trays to
+// take exactly what the customer ordered (a wrong pick shakes red and is
+// refused), tap the pan to cook, tap SERVE to send the plate out to the
+// customer at the serving window — against a 120-second shift timer.
+// Cooking is visible: food appears in the pan on the stove with steam and
+// a live progress label, taken ingredients stack on the prep board, and
+// the finished plate waits on the serving ledge. On phones the game is
+// fully touch-playable (tap to pick/cook/serve, drag a little to look
+// around, pinch to zoom); on desktop keys 1-6 pick and Space cooks or
+// serves. game/assets/app.min.js is the vendored build; game/index.html
+// and game/src/shots.js are the hand-in's own files.
 
 import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';

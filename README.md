@@ -4,24 +4,24 @@
 [![rank](https://make.fun/badge/best-cooking-game-20261125-0137/ternakdana-52/best-cooking-game-20261125-0137-bot/rank.svg)](https://make.fun/bounty/best-cooking-game-20261125-0137/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=best-cooking-game-20261125-0137)
 [![reward](https://make.fun/badge/best-cooking-game-20261125-0137/ternakdana-52/best-cooking-game-20261125-0137-bot/reward.svg)](https://make.fun/bounty/best-cooking-game-20261125-0137?utm_source=github&utm_medium=readme&utm_campaign=best-cooking-game-20261125-0137)
 
-A third-person 3D cooking game. Built for make.fun's "Make the best cooking game" bounty, $250 in USDC.
+A stationary 3D cooking game. Built for make.fun's "Make the best cooking game" bounty, $250 in USDC.
 
-You are the chef of a small restaurant. Walk the kitchen, collect ingredients from the fridge, prep them, cook them on the range, and serve each customer before the 120-second shift timer runs out. Serve dishes to earn cash and level up; a new customer is always waiting.
+You are the chef of a small restaurant, working one fixed station behind the counter. Tap the ingredient trays to take exactly what the customer ordered, tap the pan to cook it, and tap SERVE to send the plate out to the customer at the serving window — all before the 120-second shift timer runs out. Serve dishes to earn cash and level up; a new customer is always waiting.
 
 ## How to play
 
-- `W A S D` or arrow keys — move the chef around the kitchen
-- Drag the mouse — rotate the camera · mouse wheel — zoom
-- `E` — interact with the nearest station (or click the gold button)
-- Click / tap a station — walk there and interact automatically
-- On phones: left joystick to move, drag to look, pinch to zoom, big USE button to interact
-- Follow the order board: Fridge → Prep Station → Cooking Range → Serving Counter
+- Tap / click an ingredient tray — take what the customer ordered (the ORDER BOARD shows it). A wrong ingredient shakes red and is refused.
+- Tap / click the pan — cook the dish once all its ingredients are on the prep board
+- Tap SERVE (or the plate at the window) — send the finished dish to the customer
+- Drag a little to look around · mouse wheel / pinch — zoom
+- On desktop: keys `1`–`6` pick ingredients, `Space` cooks or serves
+- On phones: everything is a tap
 
-Cooking is visible: the food appears in the pan on the stove with steam and a live "COOKING %" label, the ingredients you carry ride on a tray in the chef's hands, and the finished plate waits on the serving counter.
+Cooking is visible: the food appears in the pan on the stove with steam and a live "COOKING %" label, taken ingredients stack on the prep board, and the finished plate — stacked like real food — waits on the serving ledge for the customer.
 
 ## Provenance
 
-The 3D game source was supplied by the entrant (from their uploaded `master-chef-3d.zip`) and integrated by the agent: the agent removed the Google Fonts import so the game makes zero network requests, added the 120-second shift timer and the order-board heading, added the screenshot-staging driver, built the game to static files, and wrote the hand-in program and this entry around it. In the second rebuild the agent added the visible cooking (food in the pan, steam, live progress label, carry tray, finished plate, ingredient props on the counters), the tap-to-walk station interaction with highlighted markers, and the full phone controls (virtual joystick, touch camera, pinch zoom, USE button). The kitchen, chef, stations and recipes are procedurally built from Three.js geometry — no downloaded models, no network at run time.
+The 3D game source was supplied by the entrant (from their uploaded `master-chef-3d.zip`) and integrated by the agent: the agent removed the Google Fonts import so the game makes zero network requests, added the 120-second shift timer and the order-board heading, added the screenshot-staging driver, built the game to static files, and wrote the hand-in program and this entry around it. In the second rebuild the agent added the visible cooking (food in the pan, steam, live progress label, carry tray, finished plate, ingredient props on the counters), the tap-to-walk station interaction with highlighted markers, and the full phone controls (virtual joystick, touch camera, pinch zoom, USE button). In the third rebuild the agent reworked the game into a stationary station at the entrant's request: the chef stays in one place, ingredients are taken by tapping the trays (validated against the customer order, wrong picks refused with a red shake), the pan cooks visibly, and the finished plate is served to a customer at the window; the visuals were made more realistic with warm lighting, wood and marble textures, and detailed food meshes. The kitchen, chef, station and recipes are procedurally built from Three.js geometry — no downloaded models, no network at run time.
 
 ## Run it
 
